@@ -1,0 +1,39 @@
+package com.spring.member.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
+import org.springframework.stereotype.Service;
+
+import com.spring.member.dao.MemberDAO;
+
+
+@Service("memberservice222") //"서비스"임을 나타내고, 그 객체명을 memberService
+public class MemberServiceImpl implements MemberService{
+
+	
+	
+	@Autowired
+	private MemberDAO memberDAO;
+	
+	
+	
+	
+//	public void setMemberDAO(MemberDAO memberDAO) {
+//		this.memberDAO = memberDAO;
+//	}
+
+
+
+
+	@Override
+	public List listMembers() throws DataAccessException {
+//		System.out.println("memberDAO :" + memberDAO);
+		
+		List membersList=memberDAO.listMembers();
+		
+		return membersList;
+	}
+
+}

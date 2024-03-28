@@ -1,0 +1,18 @@
+package jungsuk.ch12_1;
+
+public class BoxTest {
+
+	public static void main(String[] args) {
+		Box<String> b=new Box<>();
+
+		//Box<?> b = new Box();
+		 //Box<?> b = new Box<>();
+		//Box<?> b = new Box<Object>();
+		//Box<Object> b = new Box<Fruit>();
+		 //Box b = new Box<Fruit>();
+		 //Box<? extends Fruit> b = new Box<Apple>();
+		 //Box<? extends Object> b = new Box<? extends Fruit>();
+
+	}
+
+}

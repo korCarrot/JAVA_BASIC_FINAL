@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/schema/beans/spring-beans.xsd">
+<beans>
+	<bean id="p1" class="com.spring.ex01.PersonServiceImpl">
+		<property name="name">
+			<value>홍길동</value>
+		</property>
+	</bean>
+</beans>

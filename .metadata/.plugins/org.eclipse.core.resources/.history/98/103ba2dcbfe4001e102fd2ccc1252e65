@@ -1,0 +1,22 @@
+package jungsuk.ch11_4;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Exercise11_10 {
+
+	public static void main(String[] args) {
+
+		Set set = new HashSet();
+
+		System.out.println(set.size());
+
+		int[][] board = new int[5][5];
+
+		for (int i = 0; set.size() < 25; i++) {
+			set.add((int) (Math.random() * 30) + 1 + "");
+		}
+
+	}
+
+}

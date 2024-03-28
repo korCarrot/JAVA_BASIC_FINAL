@@ -1,0 +1,16 @@
+package jungsuk.ch12_1;
+
+public class Product {
+	
+	
+	String productName;
+	
+	public Product() {
+	
+	}
+	
+	
+	
+	
+
+}

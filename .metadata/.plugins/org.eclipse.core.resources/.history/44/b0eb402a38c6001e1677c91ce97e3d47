@@ -1,0 +1,13 @@
+package jungsuk.ch06;
+
+import java.util.Arrays;
+
+public class Ex6_23_1 {
+
+	public static void main(String[] args) {
+		int[] data = {3,2,9,4,7};
+		System.out.println(Arrays.toString(data));
+
+	}
+
+}

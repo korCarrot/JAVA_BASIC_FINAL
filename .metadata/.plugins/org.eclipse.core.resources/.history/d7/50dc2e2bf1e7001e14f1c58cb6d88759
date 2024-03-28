@@ -1,0 +1,9 @@
+package sec02;
+
+public class Person {
+	
+	void action(Calculable calculable) {
+		
+	}
+
+}

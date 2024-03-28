@@ -1,0 +1,16 @@
+package com.spring.ex01;
+
+public class LoginVO {
+
+		private String userID;
+		private String password;
+		public String getUserID() {
+			return userID;
+		}
+		public void setUserID(String userID) {
+			this.userID = userID;
+		}
+		
+		
+		
+}

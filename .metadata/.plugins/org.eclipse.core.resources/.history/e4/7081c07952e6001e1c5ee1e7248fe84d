@@ -1,0 +1,10 @@
+package jungsuk.ch12;
+
+public class FruitBox<T> {
+
+	T box;
+	
+	void getList(){
+		
+	}
+}

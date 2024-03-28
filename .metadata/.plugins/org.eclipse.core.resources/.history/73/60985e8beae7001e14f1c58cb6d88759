@@ -1,0 +1,22 @@
+package sec01;
+
+
+
+@FunctionalInterface //
+public interface Calculable {
+	
+	//상
+	
+	//추
+	
+	abstract void calculate(int x, int y);
+	
+	//디
+	
+	//정
+	
+	
+	//abstract void calculate2(int a, int b);
+	
+
+}

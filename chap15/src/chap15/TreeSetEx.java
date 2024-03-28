@@ -1,0 +1,63 @@
+package chap15;
+
+import java.util.NavigableSet;
+import java.util.SortedSet;
+import java.util.TreeSet;
+
+public class TreeSetEx {
+
+	public static void main(String[] args) {
+		
+		
+		TreeSet<Integer> scores=new TreeSet<>();
+//		System.out.println(scores);
+		
+		scores.add(87);
+		scores.add(98);
+		scores.add(75);
+		scores.add(95);
+		scores.add(90);
+		scores.add(80);
+		
+		System.out.println(scores);
+		
+		
+		NavigableSet<Integer>  navigableSet=scores.descendingSet();
+		
+		
+		System.out.println(navigableSet);
+		
+		
+		for(int i : navigableSet ) {
+			System.out.println(i);
+		}
+		
+		SortedSet<Integer>  sortedSet= scores.subSet(80, 90);
+		System.out.println(sortedSet);
+		
+		
+		
+		
+//		TreeSet<String> scores2=new TreeSet<>();
+//		System.out.println(scores2);
+//		
+//		scores2.add("candy");
+//		scores2.add("apple");
+//		scores2.add("나라");
+//		scores2.add("egg");
+//		
+//		scores2.add("dog");
+//		scores2.add("강");
+//		
+//		scores2.add("App");
+//		scores2.add("banana");
+//		scores2.add("다락방");
+		
+		
+//		System.out.println(scores2);
+		
+		
+
+	}
+
+}

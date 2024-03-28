@@ -1,0 +1,13 @@
+package sec03;
+
+public class Person {
+	
+	
+	void ordering(Comparable comparable) {
+		
+		
+		comparable.compare("A", "B");
+		
+	};
+
+}

@@ -1,0 +1,34 @@
+package com.spring.ex03;
+
+public class MemberServiceImpl implements MemberService{
+
+	MemberDAO dao77;
+	
+	
+	
+	
+	public MemberDAO getDao77() {
+		return dao77;
+	}
+
+
+
+
+	public void setDao(MemberDAO dao77) {
+		this.dao77 = dao77;
+	}
+
+
+
+
+	@Override
+	public void listMembers() {
+		
+	
+		System.out.println("회원 목록 나옴###");
+		
+		dao77.listMembers();
+		
+	}
+
+}

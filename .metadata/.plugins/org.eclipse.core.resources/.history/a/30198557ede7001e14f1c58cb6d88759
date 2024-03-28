@@ -1,0 +1,8 @@
+package sec01;
+
+
+@FunctionalInterface
+public interface Workable {
+
+	abstract void work();
+}

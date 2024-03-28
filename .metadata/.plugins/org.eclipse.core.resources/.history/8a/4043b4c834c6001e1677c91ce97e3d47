@@ -1,0 +1,18 @@
+package jungsuk.ch06;
+
+public class Ex6_20_1 {
+
+	//섞어라라는 기능을 가짐 함수를 정의\
+	static void shuffle(int arr[]){
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		//함수 호출
+		//섞을 대상(를) 
+		int[] original = {1,2,3,4,5,6,7,8,9};
+		shuffle(original);
+	}
+
+}

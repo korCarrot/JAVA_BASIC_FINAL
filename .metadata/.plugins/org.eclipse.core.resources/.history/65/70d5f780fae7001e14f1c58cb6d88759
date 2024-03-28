@@ -1,0 +1,23 @@
+package ch16;
+
+public class Button {
+	
+	
+	@FunctionalInterface
+	static interface ClickListener{
+		void onClick();
+	}
+
+	
+	
+	
+	private ClickListener clickListener;
+	
+	
+	
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,40 @@
+package com.spring.ex02;
+
+import java.io.Reader;
+import java.util.List;
+
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+
+public class MemberDAO {
+
+	// 연결이나 DataSource에서 SqlSession을 생성합니다.
+	public static SqlSessionFactory sqlMapper = null;
+
+	private static SqlSessionFactory getInstance() {
+
+		if (sqlMapper == null) {
+			try {
+
+				// DB 연동 설정 정보 파일 불러오기
+				String resource = "mybatis/SqlMapConfig.xml";
+
+				Reader reader = Resources.getResourceAsReader(resource);
+
+				
+				//SqlSessionFactoryBuilder 객체 만들기
+				sqlMapper = new SqlSessionFactoryBuilder().build(reader);
+			} catch (Exception e) {
+				System.out.println("SqlSessionFactory 객체 생성 중 예외 발생");
+			}
+
+		}
+		return sqlMapper;
+	}
+	
+	
+
+	
+}

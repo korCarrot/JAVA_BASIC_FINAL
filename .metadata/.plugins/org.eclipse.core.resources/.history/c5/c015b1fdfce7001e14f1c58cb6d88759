@@ -1,0 +1,19 @@
+package ch16;
+
+public class Ex6 {
+	
+	
+	static double calc() {
+		return null;
+	}
+	
+
+	public static void main(String[] args) {
+		
+		
+		
+		
+
+	}
+
+}

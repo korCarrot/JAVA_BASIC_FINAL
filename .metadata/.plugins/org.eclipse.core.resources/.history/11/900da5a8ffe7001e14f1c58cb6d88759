@@ -1,0 +1,14 @@
+package ch16_2;
+
+public class Ex8 {
+
+	
+	private static Student students[]= {new Student("홍"), 90,96};
+	
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+}

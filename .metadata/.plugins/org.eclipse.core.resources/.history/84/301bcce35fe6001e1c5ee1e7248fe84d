@@ -1,0 +1,18 @@
+package com.spring.account;
+
+import org.springframework.transaction.annotation.Transactional;
+
+@Transactional
+public class AccountService {
+	
+	private AccountDAO accountDAO;
+
+	public void setAccountDAO(AccountDAO accountDAO) {
+		this.accountDAO = accountDAO;
+	}
+	
+	void sendMoney() throws Exception{
+		accountDAO.updateBalance1();
+		accountDAO.updateBalance2();
+	}
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans   
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/aop
+http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+
+<!-- InternalResourceView(예: 서블릿 및 JSP)와 JstlView와 같은 하위 클래스를 지원하는 UrlBasedViewResolver의 
+		편리한 하위 클래스입니다 -->
+
+<!-- JstlView
+ JSTL 페이지(예: JSP 표준 태그 라이브러리를 사용하는 JSP 페이지)에 대한 InternalResourceView 전문화-->
+	
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/views/test/"></property>
+		<property name="suffix" value=".jsp"></property>
+
+	</bean>
+	
+	
+
+<!-- DefaultAnnotationHandlerMapping, 클래스 레벨에서 @RequestMapping를 처리
+클래스 또는 메소드 수준에서 RequestMapping 어노테이션(@RequestMapping)을 통해 표현된 HTTP 경로를 기반으로 핸들러를 매핑하는 
+HandlerMapping 인터페이스 구현. -->
+
+
+<!-- @RequestMapping 주석을 사용하여 요청을 컨트롤러 메서드에 매핑 -->
+
+  <bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"/>
+  
+  <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"/>
+
+
+
+<!--
+
+Spring 빈으로 자동 등록될 주석이 달린 구성 요소에 대한 클래스 경로를 검색합니다. 기본적으로
+ Spring에서 제공하는 @Component, @Repository, @Service 및 @Controller 스테레오타입이 감지됩니다.  -->
+
+<context:component-scan base-package="com.spring2"/>
+
+</beans>

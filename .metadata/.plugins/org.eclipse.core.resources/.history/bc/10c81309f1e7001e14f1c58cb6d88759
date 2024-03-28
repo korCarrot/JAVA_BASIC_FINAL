@@ -1,0 +1,6 @@
+package sec02;
+
+public interface Calculable {
+
+	abstract double calc(double x, double y);
+}

@@ -1,0 +1,7 @@
+package jungsuk.ch12;
+
+public class Juicer {
+	static <T extends Fruit> String makeJuice(FruitBox<T> box){
+		return null;
+	}
+}

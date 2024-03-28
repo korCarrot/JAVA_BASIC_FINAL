@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+
+function goNaver(){
+	location.href = "http://www.daum.net";
+}
+
+function fn_validate(){
+	
+	let name=document.form1.id.value;
+	let password=document.form1.password.value;
+	console.log(name);
+	if(name.length==0 ||  name==='' ||   password.length==0 || password===""){
+		alert("아이디, 패스워드는 반드시  둘 다 넣으세요");
+	}else{
+		
+		form1.method="post";
+		form1.action="loginResult.jsp";
+		form1.submit();
+	}
+}
+</script>
+
+</head>
+<body>
+<form name="form1"  action="loginResult.jsp" method="post">
+
+아이디 : <input type="text"  name="id" /><br>
+패스워드 : <input type="password" name="password" />
+<br>
+<!-- <input type="submit" value="로그인1"> --> 
+
+
+<!-- <input type="button" value="로그인" onclick="goNaver();"> -->
+<input type="button" value="로그인" onclick="fn_validate();">
+<input type="reset" value="취소">
+
+
+<input type="hidden" value="맛있는것" name="hid"> 
+</form>
+
+<!-- <button id="btn1">네이버로 가자2 </button> --> 
+
+
+<!-- <script >
+let btn1=document.getElementById("btn1");
+btn1.addEventListener("click", function () {
+ 
+	location.href = "http://www.naver.com";
+	
+})
+
+</script> -->
+</body>
+</html>

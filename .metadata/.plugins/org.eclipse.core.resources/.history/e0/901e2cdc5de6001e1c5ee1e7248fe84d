@@ -1,0 +1,14 @@
+package com.spring.account;
+
+
+public class AccountVO {
+	
+	private String accountNo;
+	private String custName;
+	private int balance;
+	
+	public AccountVO() {
+	
+	}
+
+}

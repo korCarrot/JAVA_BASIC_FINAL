@@ -1,0 +1,25 @@
+package com.spring.account;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@Data
+public class AccountVO {
+	
+	private String accountNo;
+	private String custName;
+	private int balance;
+	
+	AccountVO(){
+		
+	}
+
+	public AccountVO(String accountNo, String custName, int balance) {
+		super();
+		this.accountNo = accountNo;
+		this.custName = custName;
+		this.balance = balance;
+	}
+	
+	
+}

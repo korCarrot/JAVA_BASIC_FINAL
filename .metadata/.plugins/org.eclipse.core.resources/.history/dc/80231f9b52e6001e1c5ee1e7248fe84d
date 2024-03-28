@@ -1,0 +1,12 @@
+package jungsuk.ch12;
+
+import java.util.List;
+
+public class FruitBox<T> extends Fruit {
+
+	T box;
+	
+	Fruit[] getList(){
+		return null;
+	}
+}

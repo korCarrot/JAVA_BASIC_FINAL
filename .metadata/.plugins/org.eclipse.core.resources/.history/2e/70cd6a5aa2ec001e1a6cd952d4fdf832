@@ -1,0 +1,19 @@
+package chap17;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class Ex7 {
+	
+	public static void main(String[] args) {
+		 List<Member2> mList=Arrays.asList(new Member2("홍길동", "개발자"),
+				new Member2("신용권", "디자이너"),
+				new Member2("김자바", "개발자")
+				);
+		 
+		 
+		 double avg=mList.stream().mapToDouble((x)->{return x.getAge();}).average().getAsDouble();
+		 System.out.println(avg);
+	}
+
+}

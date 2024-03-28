@@ -1,0 +1,21 @@
+package jungsuk.ch12_1;
+
+import java.util.ArrayList;
+
+public class Ex12_4 {
+
+	
+	void merge(ArrayList<? extends Product> list){
+		
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		
+	}
+	
+	
+	
+
+}

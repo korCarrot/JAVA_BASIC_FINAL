@@ -1,0 +1,32 @@
+package ch16_2;
+
+public class Ex8 {
+
+	
+	private static Student students[]= {
+			new Student("홍", 90,96),
+			new Student("신", 95,93)
+			};
+	
+	
+	
+	static double avg(Function<Student> t){
+		
+		double result=t.apply(
+				(double)(students[0].getEnScore() + students[1].getEnScore()) / 2.0
+				);
+		
+		return result;
+	}
+	
+	public static void main(String[] args) {
+		
+		double enAvg=avg(
+				s ->{
+					s.get
+				}
+				);
+
+	}
+
+}

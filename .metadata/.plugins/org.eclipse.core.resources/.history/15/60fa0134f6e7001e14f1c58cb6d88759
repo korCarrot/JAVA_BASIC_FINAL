@@ -1,0 +1,19 @@
+package sec03;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		
+		Person p1=new Person();
+		
+		p1.ordering(
+				(str1,str2)->{
+					return 0;
+				}
+				);
+		
+
+	}
+
+}

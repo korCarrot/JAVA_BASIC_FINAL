@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:aop="http://www.springframework.org/schema/aop"
+xmlns:tx="http://www.springframework.org/schema/tx"
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+
+
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>/WEB-INF/config/jdbc.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
+		<property name="driverClass" value="${jdbc.driverClassName}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+	</bean>
+
+
+	<!-- SqlSessionFactory 객체 주입 -->
+
+	<bean id="sqlSessionFactory"
+		class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="mapperLocations"
+			value="classpath:mybatis/mappers/*.xml"></property>
+	</bean>
+
+
+	<!-- sqlSession 객체에 SqlSessionFactory 포함한 후 주입 -->
+
+	<bean id="sqlSession"
+		class="org.mybatis.spring.SqlSessionTemplate">
+
+		<constructor-arg index="0" ref="sqlSessionFactory"></constructor-arg>
+	</bean>
+
+	<!-- DAO 객체에 sqlSession 포함한 후 주입 -->
+
+	<bean id="accountDAO" class="com.spring.account.AccountDAO">
+		<property name="sqlSession" ref="sqlSession" />
+	</bean>
+
+	<!-- 트랜잭션을 사용하기 위해서 트랜잭션 매니저가 데이터소스를 참고하고 있어야 함 -->
+
+	<!-- 단일 JDBC DataSource에 대한 PlatformTransactionManager 구현입니다. 이 클래스는 설정에서 
+		javax.sql.DataSource를 연결 팩토리 메커니즘으로 사용하는 한 JDBC 드라이버가 있는 모든 환경에서 작동할 수 있습니다. 
+		지정된 DataSource의 JDBC 연결을 현재 스레드에 바인딩하여 잠재적으로 DataSource당 하나의 스레드 바인딩 연결을 
+		허용합니다. 참고: 이 트랜잭션 관리자가 작동하는 DataSource는 독립적인 연결을 반환해야 합니다. 연결은 일반적으로 연결 풀에서 
+		나오지만 DataSource는 특별히 범위가 지정되거나 제한된 연결을 반환해서는 안 됩니다. 이 트랜잭션 관리자는 지정된 전파 동작에 
+		따라 연결을 스레드 바인딩 트랜잭션과 연결합니다. 진행 중인 트랜잭션 중에도 별도의 독립적인 Connection을 얻을 수 있다고 
+		가정합니다. -->
+	<bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+
+	<tx:annotation-driven
+		transaction-manager="txManager" />
+
+</beans>

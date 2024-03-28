@@ -1,0 +1,51 @@
+package jungsuk.ch09;
+
+public class Exercise9_10 {
+
+	static String format(String str, int length, int align) {
+
+		if(str!=null && str.length()!=0 ) {
+		
+			if(length < str.length()) {
+			
+				str=str.substring(0, length);
+				
+			}else {
+				char [] charArrr1= new char[length];
+				
+				for(int i=0;i<length;i++) {
+					charArrr1[i]=' ';
+				}
+			
+				//System.out.println(charArrr1.toString());
+				
+				System.out.print("#");
+				for(int i=0;i<length;i++) {					
+					System.out.print(charArrr1[i]);					
+				}
+				System.out.print("#");
+				
+				char charArr2 [] = str.toCharArray();
+				System.out.println(charArr2);
+				
+				System.arraycopy(charArr2, 0, charArrr1, 0, charArr2.length);
+				System.out.println("복사결과 :" + charArr2);
+			}
+		}
+		
+		
+		
+		return str;
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		String str = "가나다"; 
+		System.out.println(format(str,7,0)); // 왼쪽 정렬
+//		System.out.println(format(str,7,1)); // 가운데 정렬
+//		System.out.println(format(str,7,2)); // 오른쪽 정렬
+
+	}
+
+}

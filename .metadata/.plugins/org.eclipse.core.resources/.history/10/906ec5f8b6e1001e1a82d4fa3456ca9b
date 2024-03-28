@@ -1,0 +1,16 @@
+package com.spring.ex03;
+
+public class MemberTest2 {
+
+	public static void main(String[] args) {
+	
+		
+		//스프링 방식
+		//xml에서 빈 설정 후 그 객체(빈)을 주입(DI)
+		
+		
+		
+
+	}
+
+}

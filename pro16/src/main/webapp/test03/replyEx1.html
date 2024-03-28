@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+
+<script>
+
+    // $(document).ready(
+    //     function () {
+            
+    //     }
+    // );
+
+    function fn_process() {
+    	
+    	
+       var reply=$("input[type *=text ]").val()	
+    	
+       console.log(reply);
+       
+       $.ajax({
+        type : "get", 
+        dataType : "text",   // json 
+        url : "http://localhost:8080/pro16/ajaxTest1",
+        /* data :{ menu : "jajjang2"}, */        
+        /* data :{ "menu" : "짜장2"}, */        
+        data :{ "menu" : reply},       
+        
+        success : function (toClient, status) {
+        	
+            console.log("성공");
+           /*  console.log(success_data,status); */
+            
+             $("#reply").append(toClient+"<br>"); 
+           /*  $("#reply").text(toClient); */
+            
+            
+        },
+        error : function () {
+            console.log("실패")
+        },
+        complete : function () {
+            console.log("완료")
+        },
+       })
+    }
+
+
+</script>
+
+
+</head>
+<body>
+
+아래는 이 글에 대한 댓글입니다.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<div id="reply"></div>
+<input type="text" value="욕설 금지">
+<input type="button" value="댓글 달기" onclick="fn_process()">
+
+
+
+
+</body>
+</html>

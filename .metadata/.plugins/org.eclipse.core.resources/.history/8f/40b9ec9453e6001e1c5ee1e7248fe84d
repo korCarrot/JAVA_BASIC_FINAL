@@ -1,0 +1,15 @@
+package jungsuk.ch12_1;
+
+public class BoxTest {
+
+	public static void main(String[] args) {
+		
+//		Box<Object> b = new Box<String>();
+		//Box<Object> b = (Object)new Box<String>();
+		//new Box<String>().setItem(new Object());
+		
+		
+		new Box<String>().setItem("ABC");
+	}
+
+}

@@ -1,0 +1,15 @@
+package sec02;
+
+public class ArrToStreamEx {
+
+	public static void main(String[] args) {
+		
+		
+		String strArr[]= {" 홍일동 ","홍일동 "," 홍일동"};
+		
+		//기존 방식
+		for(String str : strArr) {
+			System.out.println(str);
+		}
+	}
+}

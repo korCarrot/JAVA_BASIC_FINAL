@@ -1,0 +1,26 @@
+package ch16;
+
+public class Ex7 {
+
+	static int scores[] = { 10, 50, 3 };
+
+	static int maxOrMin(Operator operator) {
+
+		int result = scores[0];
+
+		for (int score : scores) {
+			result=operator.appy(result, score);
+		}
+
+		return result;
+	}
+
+	public static void main(String[] args) {
+
+		
+		//최대값
+		
+		
+	}
+
+}

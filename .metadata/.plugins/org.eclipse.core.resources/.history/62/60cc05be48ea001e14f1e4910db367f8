@@ -1,0 +1,14 @@
+package sec01;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ScoreTest {
+
+	public static void main(String[] args) {
+		
+		List<Student> stuList= 	new ArrayList<Student>();
+
+	}
+
+}

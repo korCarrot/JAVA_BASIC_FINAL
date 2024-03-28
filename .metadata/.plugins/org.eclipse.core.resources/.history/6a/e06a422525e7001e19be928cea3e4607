@@ -1,0 +1,7 @@
+package jungsuk.ch12_1;
+
+
+@TestInfo(count = 1, value = {"bbb","ccc"})
+public class Exercise12_7_1 {
+
+}

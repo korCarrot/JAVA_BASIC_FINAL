@@ -1,0 +1,21 @@
+package com.spring.account;
+
+import org.apache.ibatis.session.SqlSession;
+
+public class AccountDAO {
+	private SqlSession sqlSession;
+
+	public void setSqlSession(SqlSession sqlSession) {
+		this.sqlSession = sqlSession;
+	}
+	
+	//돈 보내기
+	void updateBalance1() {
+		
+	}
+
+	//돈 받기
+	void updateBalance2() {
+		
+	}
+}

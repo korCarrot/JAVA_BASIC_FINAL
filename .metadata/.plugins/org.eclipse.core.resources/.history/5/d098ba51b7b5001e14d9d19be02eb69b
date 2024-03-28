@@ -1,0 +1,14 @@
+package jungsuk.ch03;
+
+public class Ex3_3 {
+
+	public static void main(String[] args) {
+		
+		
+		System.out.println( true ? "참" : "거짓");
+		
+		
+
+	}
+
+}

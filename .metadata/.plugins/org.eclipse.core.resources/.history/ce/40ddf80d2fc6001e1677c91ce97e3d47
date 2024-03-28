@@ -1,0 +1,18 @@
+package jungsuk.ch06;
+
+public class Ex6_22 {
+	
+	void isNumber(){
+		
+	}
+	
+
+	public static void main(String[] args) {
+		
+		String str = "123";
+		//System.out.println(str+" ? "+isNumber(str)); 는 숫자입니까
+		str = "1234o";
+		//System.out.println(str+" ? "+isNumber(str)); 
+	}
+
+}

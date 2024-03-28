@@ -1,0 +1,10 @@
+package jungsuk.ch12;
+
+public class JuicerTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,12 @@
+package sec04;
+
+public class Person {
+	
+	
+	
+	Member getMember(Creatable1 creatable1){
+		Member m1=creatable1.create("park");
+		return m1;
+	}
+
+}
