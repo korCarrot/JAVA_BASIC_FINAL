@@ -29,10 +29,10 @@ public class HomeController {
 		logger.info("Welcome home! The client locale is {}.", locale);
 		
 		Date date = new Date();
-//		*DateFormat.LONG: ³¯Â¥ ¹× ½Ã°£ Çü½Ä Áß¿¡ "±ä" Çü½ÄÀ» ÁöÁ¤ÇÕ´Ï´Ù. 
-//		Ã¹¹øÂ° ¸Å°³º¯¼ö´Â ³¯Â¥¸¦, µÎ¹øÂ° ¸Å°³º¯¼ö¸¦ ½Ã°£À» Ç¥½ÃÇÕ´Ï´Ù.
-//		longÀº ±ä Çü½ÄÀ¸·Î ¿ù, ÀÏ ¹× ¿¬µµ¸¦ Ç®³×ÀÓÀ¸·Î Ç¥½ÃÇÏ¸ç, ½Ã°£Àº ½ÃºÐÃÊ¸¦ Ç¥½ÃÇÕ´Ï´Ù. (short, medium, fullµµ ÀÖÀ½)
-//		*locale : ³¯Â¥¿Í ½Ã°£À» Áö¿ªÈ­µÈ Çü½ÄÀ¸·Î ¹ÝÈ¯ÇÏ´Â µ¥ »ç¿ë
+//		*DateFormat.LONG: ë‚ ì§œ ë° ì‹œê°„ í˜•ì‹ ì¤‘ì— "ê¸´" í˜•ì‹ì„ ì§€ì •í•©ë‹ˆë‹¤. 
+//		ì²«ë²ˆì§¸ ë§¤ê°œë³€ìˆ˜ëŠ” ë‚ ì§œë¥¼, ë‘ë²ˆì§¸ ë§¤ê°œë³€ìˆ˜ë¥¼ ì‹œê°„ì„ í‘œì‹œí•©ë‹ˆë‹¤.
+//		longì€ ê¸´ í˜•ì‹ìœ¼ë¡œ ì›”, ì¼ ë° ì—°ë„ë¥¼ í’€ë„¤ìž„ìœ¼ë¡œ í‘œì‹œí•˜ë©°, ì‹œê°„ì€ ì‹œë¶„ì´ˆë¥¼ í‘œì‹œí•©ë‹ˆë‹¤. (short, medium, fullë„ ìžˆìŒ)
+//		*locale : ë‚ ì§œì™€ ì‹œê°„ì„ ì§€ì—­í™”ëœ í˜•ì‹ìœ¼ë¡œ ë°˜í™˜í•˜ëŠ” ë° ì‚¬ìš©
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
 		
 		String formattedDate = dateFormat.format(date);
