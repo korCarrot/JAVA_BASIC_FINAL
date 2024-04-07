@@ -155,11 +155,18 @@
 		
 		<!-- mysql -->
 		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-		<dependency>
+		<!--<dependency>
 		    <groupId>mysql</groupId>
 		    <artifactId>mysql-connector-java</artifactId>
 		    <version>6.0.6</version>
-		</dependency>
+		</dependency>-->
+		<!-- https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java -->
+<dependency>
+    <groupId>com.google.protobuf</groupId>
+    <artifactId>protobuf-java</artifactId>
+    <version>3.25.2</version>
+</dependency>
+
 	</dependencies>
     <build>
         <plugins>

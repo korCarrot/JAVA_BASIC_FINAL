@@ -6,7 +6,7 @@
 	<appender name="console" class="org.apache.log4j.ConsoleAppender">
 		<param name="Target" value="System.out" />
 		<layout class="org.apache.log4j.PatternLayout">
-			<param name="ConversionPattern" value="%-5p: %c - %m%n" />
+		<param name="ConversionPattern" value="%-5p: %c - %m%n" />
 		</layout>
 	</appender>
 	
@@ -34,8 +34,12 @@
 
 	<!-- Root Logger -->
 	<root>
-		<priority value="warn" />
+		<priority value="info" />
 		<appender-ref ref="console" />
 	</root>
+	
+	<!--루트 로거는 모든 로그 메시지의 상위 계층이며, 모든 로그에 대한 기본적인 설정을 담당합니다.
+	반면에 어플리케이션 로거는 특정 패키지 또는 클래스에 대한 로깅 설정을 담당합니다.
+	어플리케이션 로거는 루트 로거의 하위로 분류되며, 루트 로거의 설정을 상속받습니다.-->
 	
 </log4j:configuration>
