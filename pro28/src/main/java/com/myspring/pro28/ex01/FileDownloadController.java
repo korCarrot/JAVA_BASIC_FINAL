@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 //import com.mysql.cj.x.protobuf.MysqlxDatatypes.Scalar.String;
 
-//파일 다운로드 컨트롤러는 이미지 파일을 받아와서 읽고 브라우저에 나타내주는 역할인듯.
-@Controller
+//파일 다운로드 컨트롤러는 이미지 파일을 받아와서 읽고 브라우저에 나타내주는 역할. 사용시 컨트롤러 주석 풀기.
+//@Controller
 public class FileDownloadController {
 //	private static final Logger logger = LoggerFactory.getLogger(FileDownloadController.class);
 	

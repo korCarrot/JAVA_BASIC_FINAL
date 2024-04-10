@@ -73,7 +73,7 @@ public class FileUploadController  {
 		
 		while(fileNames.hasNext()){
 			String fileName = fileNames.next();
-			System.out.println("fileName : " + fileName);	//fileName : file1		*uploadForm.jsp의 Jquery문의 name속성이 나타남.
+			logger.info("fileName : " + fileName);	//fileName : file1		*uploadForm.jsp의 Jquery문의 name속성이 나타남.
 //			MultipartFile 객체 : 클라이언트로부터 업로드된 파일에 접근하고 해당 파일을 처리할 수 있습니다.
 //								업로드된 파일의 내용을 읽고, 파일 이름, 크기, MIME 타입 등의 정보를 제공함.
 			MultipartFile mFile = multipartRequest.getFile(fileName);
@@ -88,7 +88,7 @@ public class FileUploadController  {
 			File file = new File(CURR_IMAGE_REPO_PATH +"\\"+ fileName);
 			if(mFile.getSize()!=0){ //File Null Check, 업로드된 파일이 비어있지 않은지 확인합니다. (업로드된 파일 존재)
 				if(! file.exists()){ //파일이 존재하지 않는 경우	(업로드된 파일은 존재하는데 파일 경로에 파일이 없는 경우)
-					logger.info("file.getParentFile() 상위경로가 있는가? 없으면 null: " + file.getParentFile());	//file.getParentFile() 상위경로가 있는가? 없으면 null: c:\spring\image_repo
+					logger.info("file.getParentFile() 상위경로가 있는가? 없으면 null: " + file.getParentFile());	//상위 경로 : c:\spring\image_repo
 					if(file.getParentFile().mkdirs()){ //파일이 존재하지 않는 디렉토리를 생성 (파일 경로마다 폴더를 생성)
 						file.createNewFile(); //주어진 파일 경로에 새로운 파일을 생성하는 메서드입니다.	(이름은 fileName값과 동일. 유형은 file이라는 파일로 생김)
 //	이 메서드는 파일이 이미 존재하지 않을 때만 새로운 파일을 생성하며, 파일이 이미 존재하거나 디렉토리가 아닌 경우에는 예외를 발생시킵니다
